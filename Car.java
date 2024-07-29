@@ -39,3 +39,71 @@ public class Car {
         car3.print();
     }
 }
+
+//exercise 2
+
+public class Car {
+    // Private fields
+    private int weight;
+    private String manufacturer;
+    private String model;
+
+    // Constructor
+    public Car(int weight, String manufacturer, String model) {
+        this.weight = weight;
+        this.manufacturer = manufacturer;
+        this.model = model;
+    }
+
+    // Getter and Setter methods
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    // Method to print car details
+    public void print() {
+        System.out.println("Car Details:");
+        System.out.println("Weight: " + this.weight);
+        System.out.println("Manufacturer: " + this.manufacturer);
+        System.out.println("Model: " + this.model);
+    }
+
+    public static void main(String[] args) {
+        // Create Car object using constructor
+        Car car = new Car(1500, "Toyota", "Corolla");
+
+        // Print initial details
+        car.print();
+
+        // Change values using setters
+        car.setWeight(1800);
+        car.setManufacturer("Honda");
+        car.setModel("Civic");
+
+        // Print changed details using getters
+        System.out.println("Changed Car Details:");
+        System.out.println("Weight: " + car.getWeight());
+        System.out.println("Manufacturer: " + car.getManufacturer());
+        System.out.println("Model: " + car.getModel());
+    }
+}
